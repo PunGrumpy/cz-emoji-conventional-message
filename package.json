@@ -1,0 +1,47 @@
+{
+  "name": "cz-emoji-conversation",
+  "version": "1.0.0",
+  "scripts": {
+    "commit": "cz",
+    "build": "tsc",
+    "lint": "eslint",
+    "format": "prettier --write ."
+  },
+  "author": "PunGrumpy (https://github.com/PunGrumpy)",
+  "keywords": [
+    "cz",
+    "emoji",
+    "commitizen",
+    "conversation"
+  ],
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^20.6.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "bun-types": "latest",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commitizen": "^4.3.0",
+    "inquirer": "8.0.0",
+    "word-wrap": "^1.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./build/index.js"
+    }
+  }
+}
