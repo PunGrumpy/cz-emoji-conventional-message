@@ -9,6 +9,22 @@
 
 A [commitizen](https://github.com/commitizen/cz-cli) adapter for [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) that uses emojis for commit types.
 
+## `📝` Commit Types
+
+| Commit Type | Emoji | Description                                                    |
+| :---------- | :---: | :------------------------------------------------------------- |
+| `feature`   |  ✨   | Introducing new features.                                      |
+| `fix`       |  🐛   | Fixing a bug.                                                  |
+| `docs`      |  📝   | Writing docs.                                                  |
+| `style`     |  🎨   | Improving structure / format of the code.                      |
+| `perf`      |  🚀   | Improving performance.                                         |
+| `refactor`  |  🔨   | A code change that neither fixes a bug nor adds a feature.     |
+| `test`      |  🧪   | Adding missing tests or correcting existing tests.             |
+| `build`     |  👷   | Changes that affect the build system or external dependencies. |
+| `ci`        |  🔧   | Changes to our CI configuration files and scripts.             |
+| `rev`       |  ⏪   | Reverting changes.                                             |
+| `wip`       |  🚧   | Work in progress.                                              |
+
 ## `🚀` Features
 
 - [x] Commitizen adapter
