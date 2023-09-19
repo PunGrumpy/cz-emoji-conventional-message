@@ -22,11 +22,6 @@
     "husky": "^8.0.3",
     "prettier": "^3.0.3"
   },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
-    }
-  },
   "keywords": [
     "cz",
     "emoji",
@@ -37,6 +32,7 @@
     "commit": "cz",
     "build": "tsc",
     "lint": "eslint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "npx husky install"
   }
 }
