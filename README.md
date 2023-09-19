@@ -1,5 +1,8 @@
 <div align="center">
-  <h1><code>🦄</code> CZ Emoji Conversation</h1>
+  <h1><code>🦄</code> CZ Emoji Conventional Changelog</h1>
+  <p>
+    <strong>Commitizen adapter for conventional-changelog that uses emojis for commit types.</strong>
+  </p>
 </div>
 
 ## `📄` Description

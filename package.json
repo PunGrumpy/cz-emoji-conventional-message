@@ -1,6 +1,6 @@
 {
-  "name": "cz-emoji-conversation",
-  "version": "1.0.1-beta.0",
+  "name": "cz-emoji-conventional-changelog",
+  "version": "1.0.1",
   "author": "PunGrumpy (https://github.com/PunGrumpy)",
   "config": {
     "commitizen": {
@@ -24,7 +24,8 @@
     "cz",
     "emoji",
     "commitizen",
-    "conversation"
+    "conventional-changelog",
+    "commit"
   ],
   "scripts": {
     "commit": "cz",
