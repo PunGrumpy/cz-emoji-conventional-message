@@ -1,9 +1,9 @@
 {
-  "name": "cz-emoji-conventional-changelog",
+  "name": "cz-emoji-conventional-message",
   "version": "1.0.0",
   "publisher": "PunGrumpy",
   "description": "A commitizen adapter for the conventional-changelog with emoji",
-  "repository": "https://github.com/PunGrumpy/cz-emoji-conventional-changelog",
+  "repository": "https://github.com/PunGrumpy/cz-emoji-conventional-message",
   "author": "PunGrumpy (https://github.com/PunGrumpy)",
   "config": {
     "commitizen": {
