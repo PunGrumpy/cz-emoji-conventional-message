@@ -32,8 +32,6 @@ A [commitizen](https://github.com/commitizen/cz-cli) adapter for [conventional-c
 - [x] Searchable commit types
 
 ```shell
-cz-cli@4.3.0, cz-emoji-conversation@1.0.1
-
 ? Select the type of change that you're committing: (Press <enter> to submit)
 ❯ feature    ✨  Introducing new features. (Features)
   fix        🐛  Fixing a bug. (Bug Fixes)
@@ -62,9 +60,9 @@ cz-cli@4.3.0, cz-emoji-conversation@1.0.1
 ## `📦` Installation
 
 ```shell
-npm install --save-dev cz-emoji-conversation
+npm install --save-dev cz-emoji-conventional-message
 # or
-npm install --global cz-emoji-conversation
+npm install --global cz-emoji-conventional-message
 ```
 
 ## `🔧` Usage
@@ -75,7 +73,7 @@ npm install --global cz-emoji-conversation
 {
   "config": {
     "commitizen": {
-      "path": "cz-emoji-conversation"
+      "path": "cz-emoji-conventional-message"
     }
   }
 }
