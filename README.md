@@ -3,7 +3,7 @@
   <p>
     <strong>Commitizen adapter for conventional-changelog that uses emojis for commit types.</strong>
   </p>
-  <img src="./.github/images/preview.png" alt="Preview" width="512px" />
+  <img src="./.github/images/preview.png" alt="Preview" />
 </div>
 
 ## `📄` Description
