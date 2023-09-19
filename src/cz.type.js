@@ -71,6 +71,42 @@ const CommitType = {
     name: 'wip',
     emoji: '🚧',
     description: 'Work in progress.'
+  },
+  container: {
+    title: 'Container',
+    name: 'container',
+    emoji: '🐳',
+    description: 'Updating containers. Docker, CircleCI, BrowserStack, etc.'
+  },
+  ui: {
+    title: 'User Interface',
+    name: 'ui',
+    emoji: '💄',
+    description: 'Changes affecting the user interface.'
+  },
+  ux: {
+    title: 'User Experience',
+    name: 'ux',
+    emoji: '👁️',
+    description: 'Changes affecting the user experience.'
+  },
+  i18n: {
+    title: 'Internationalization',
+    name: 'i18n',
+    emoji: '🌐',
+    description: 'Changes affecting internationalization and localization.'
+  },
+  analytics: {
+    title: 'Analytics',
+    name: 'analytics',
+    emoji: '📈',
+    description: 'Changes affecting analytics.'
+  },
+  security: {
+    title: 'Security',
+    name: 'sec',
+    emoji: '🔒',
+    description: 'Changes affecting security.'
   }
 }
 

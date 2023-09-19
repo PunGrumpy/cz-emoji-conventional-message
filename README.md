@@ -25,6 +25,12 @@ A [commitizen](https://github.com/commitizen/cz-cli) adapter for [conventional-c
 | `ci`        |  🔧   | Changes to our CI configuration files and scripts.             |
 | `rev`       |  ⏪   | Reverting changes.                                             |
 | `wip`       |  🚧   | Work in progress.                                              |
+| `container` |  🐳   | Changes to container files.                                    |
+| `ui`        |  💄   | Changes affecting the user interface                           |
+| `ux`        |  🖌️   | Changes affecting the user experience                          |
+| `i18n`      |  🌐   | Changes affecting internationalization and localization        |
+| `analytics` |  📊   | Changes affecting analytics                                    |
+| `security`  |  🔒   | Changes affecting security                                     |
 
 ## `🚀` Features
 
@@ -56,6 +62,12 @@ A [commitizen](https://github.com/commitizen/cz-cli) adapter for [conventional-c
 [ci]:       🔧 Changes to our CI configuration files and scripts. (Continuous Integrations)
 [rev]:      ⏪ Reverting changes. (Reverts)
 [wip]:      🚧 Work in progress. (WIP)
+[container]:🐳 Changes to container files. (Containers)
+[ui]:       💄 Changes affecting the user interface
+[ux]:       🖌️ Changes affecting the user experience
+[i18n]:     🌐 Changes affecting internationalization and localization
+[analytics]:📊 Changes affecting analytics
+[security]: 🔒 Changes affecting security
 ```
 
 ## `📦` Installation
