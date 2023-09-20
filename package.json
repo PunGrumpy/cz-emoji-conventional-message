@@ -1,6 +1,6 @@
 {
   "name": "cz-emoji-conventional-message",
-  "version": "1.0.1-alpha.3",
+  "version": "1.0.1-alpha.3.1",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "publisher": "PunGrumpy",

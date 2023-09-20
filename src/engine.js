@@ -29,17 +29,6 @@ const filterSubject = (subject, disableSubjectLowerCase) => {
   return subject
 }
 
-const yesNo = [
-  {
-    name: 'Yes',
-    value: true
-  },
-  {
-    name: 'No',
-    value: false
-  }
-]
-
 module.exports = options => {
   const types = options.types
   const length = longest(Object.keys(types)).length + 1
@@ -172,17 +161,6 @@ module.exports = options => {
             message: 'Add issue references (e.g. "fix #123", "re #123".):\n',
             when: answers => answers.isIssueAffected,
             default: options.defaultIssues ? options.defaultIssues : undefined
-          },
-          {
-            type: 'list',
-            name: 'listConfirmCommit',
-            message: answers => {
-              const emoji = answers.type.split(' ')[0]
-              return `Are you sure you want to proceed with the commit message: ${emoji} ${
-                answers.type.split(' ')[1]
-              }`
-            },
-            choices: yesNo
           }
         ])
         .then(answers => {
