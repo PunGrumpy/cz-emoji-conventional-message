@@ -105,9 +105,9 @@ module.exports = options => {
                 filteredSubject.length <= maxSummaryLength(options, answers)
                   ? ''
                   : `🚨 ${chalk.red.bold('Exceeds max length')}`
-              return `${color(
-                `(${filteredSubject.length})`
-              )} ${subject} ${hint}`
+              return `${color(`(${filteredSubject.length})`)} ${chalk.reset(
+                subject
+              )} ${chalk.dim(hint)}`
             }
           },
           {
