@@ -107,7 +107,7 @@ module.exports = options => {
                   : `🚨 ${chalk.red.bold('Exceeds max length')}`
               return `${color(`(${filteredSubject.length})`)} ${chalk.reset(
                 subject
-              )} ${chalk.dim(hint)}`
+              )}${chalk.dim(hint)}`
             }
           },
           {
