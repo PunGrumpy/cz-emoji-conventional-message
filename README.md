@@ -14,7 +14,7 @@ A [commitizen](https://github.com/commitizen/cz-cli) adapter for [conventional-c
 
 | Commit Type | Emoji | Description                                                    |
 | :---------- | :---: | :------------------------------------------------------------- |
-| `feature`   |  ✨   | Introducing new features.                                      |
+| `feat`      |  ✨   | Introducing new features.                                      |
 | `fix`       |  🐛   | Fixing a bug.                                                  |
 | `docs`      |  📝   | Writing docs.                                                  |
 | `style`     |  🎨   | Improving structure / format of the code.                      |
