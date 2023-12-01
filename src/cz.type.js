@@ -1,5 +1,5 @@
 const CommitType = {
-  feature: {
+  feat: {
     title: 'Features',
     name: 'feat',
     emoji: '✨',
