@@ -1,6 +1,6 @@
 {
   "name": "cz-emoji-conventional-message",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "publisher": "PunGrumpy",
@@ -26,7 +26,7 @@
     "bun-types": "latest",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
-    "prettier": "^3.0.3"
+    "prettier": "^3.1.0"
   },
   "keywords": [
     "cz",
