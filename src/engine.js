@@ -9,11 +9,15 @@ const SearchList = require('inquirer-search-list')
 
 const filter = array => array.filter(x => x)
 
-const headerLength = answers =>
-  answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0)
+const calculateHeaderLength = answers => {
+  const headerLength =
+    answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0)
+  return headerLength
+}
 
-const maxSummaryLength = (options, answers) =>
-  options.maxHeaderWidth - headerLength(answers)
+const calculateMaxSummaryLength = (options, answers) => {
+  return options.maxHeaderWidth - calculateHeaderLength(answers)
+}
 
 const filterSubject = (subject, disableSubjectLowerCase) => {
   subject = subject.trim()
@@ -74,7 +78,7 @@ module.exports = options => {
             type: 'input',
             name: 'subject',
             message: answers =>
-              `Write a short, imperative tense description of the change (max ${maxSummaryLength(
+              `Write a short, imperative tense description of the change (max ${calculateMaxSummaryLength(
                 options,
                 answers
               )} characters):\n`,
@@ -86,23 +90,26 @@ module.exports = options => {
               )
               return filteredSubject.length === 0
                 ? 'Subject is required'
-                : filteredSubject.length <= maxSummaryLength(options, answers)
-                ? true
-                : `Subject length must be less than or equal to ${maxSummaryLength(
-                    options,
-                    answers
-                  )} characters. Current length is ${
-                    filteredSubject.length
-                  } characters.`
+                : filteredSubject.length <=
+                    calculateMaxSummaryLength(options, answers)
+                  ? true
+                  : `Subject length must be less than or equal to ${calculateMaxSummaryLength(
+                      options,
+                      answers
+                    )} characters. Current length is ${
+                      filteredSubject.length
+                    } characters.`
             },
             transformer: (subject, answers) => {
               const filteredSubject = filterSubject(subject, options)
               const color =
-                filteredSubject.length <= maxSummaryLength(options, answers)
+                filteredSubject.length <=
+                calculateMaxSummaryLength(options, answers)
                   ? chalk.green.bold
                   : chalk.red.bold
               const hint =
-                filteredSubject.length <= maxSummaryLength(options, answers)
+                filteredSubject.length <=
+                calculateMaxSummaryLength(options, answers)
                   ? ''
                   : `🚨 ${chalk.red.bold('Exceeds max length')}`
               return `${color(`(${filteredSubject.length})`)} ${chalk.reset(
@@ -164,12 +171,30 @@ module.exports = options => {
           }
         ])
         .then(answers => {
+          const maxSummaryLength = calculateMaxSummaryLength(options, answers)
+
           const wrapOptions = {
             trim: true,
             cut: false,
             newline: '\n',
             indent: '',
             width: options.maxLineWidth
+          }
+
+          const filteredSubject = filterSubject(
+            answers.subject,
+            options.disableScopeLowerCase
+          )
+          const isSubjectValid =
+            filteredSubject.length > 0 &&
+            filteredSubject.length <= maxSummaryLength
+
+          if (!isSubjectValid) {
+            const errorMessage =
+              filteredSubject.length === 0
+                ? 'Subject is required'
+                : `Subject length must be less than or equal to ${maxSummaryLength} characters. Current length is ${filteredSubject.length} characters.`
+            return Promise.reject(new Error(errorMessage))
           }
 
           const scope = answers.scope ? `(${answers.scope})` : ''
